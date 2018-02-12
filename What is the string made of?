@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<string.h>
+#define pf printf
+#define sf scanf
+int main()
+{ 	
+	char a[1000];
+	sf("%s",a);
+	int s=0;
+	int n =strlen(a);
+	for(int i=0;i<n;i++)
+	{
+		switch(a[i])
+		{
+			case '9': 
+			case '6':
+			case '0':
+			s+=6;break;
+			case '1': s+=2;break;
+			case '5': 
+			case '3':
+			case '2': s+=5;break;
+			case '4': s+=4;break;
+			case '7': s+=3;break;
+			case '8': s+=7;break;
+		}
+	}
+ 
+pf("%d",s);
+ 
+} 

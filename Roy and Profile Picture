@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+ 
+int main()
+{
+	int l,n,w,h;
+	sf("%d %d",&l,&n);
+	while(n--)
+	{
+			sf("%d %d",&w,&h);
+			if(w>=l && h>=l)
+			{
+					if(w==h)
+						pf("ACCEPTED \n");
+					else
+						pf("CROP IT \n");
+ 
+ 
+			}
+			else
+				pf("UPLOAD ANOTHER \n");
+ 
+	}
+ 
+ 
+ 
+ 
+}

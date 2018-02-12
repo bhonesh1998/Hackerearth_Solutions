@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include <string.h>
+#define pf printf
+#define sf scanf
+#define mod 1000000007
+int main()
+{ 
+ 
+	char s[1000];
+	sf("%[^\n]s",s);
+	int i;
+	int n = strlen(s);
+	for(i=0;i<n;i++)
+	{
+		if( (int)s[i] >= 65 && (int)s[i] <= 90 )
+			
+				s[i]=s[i] + 32 ; 
+			
+		else
+				s[i]=s[i]-32;
+	}
+	pf("%s",s);
+ 
+ 
+ 
+ 
+}

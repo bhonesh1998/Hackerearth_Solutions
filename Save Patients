@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+#include<queue>
+#define pf printf
+#define sf scanf
+#define mod 1000000007
+#define z long long int 
+using namespace std;
+ 
+int main(){
+ 
+    z n,i,c=0;
+    sf("%lld",&n);
+    z a[n],b[n];
+    for(i=0;i<n;i++)
+        sf("%lld",&a[i]);
+     for(i=0;i<n;i++)
+        sf("%lld",&b[i]);
+    sort(a,a+n);
+    sort(b,b+n);
+     for(i=0;i<n;i++)
+        if(a[i]>b[i])
+            c++;
+ 
+        if(c==n)
+            pf("Yes");
+        else
+            pf("No");
+ 
+ 
+ 
+    return 0;
+} 

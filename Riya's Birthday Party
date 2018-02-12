@@ -1,0 +1,21 @@
+#include <stdio.h>
+#define pf printf
+#define sf scanf
+#define mod 1000000007
+ 
+int main()
+{
+    int t;
+    sf("%d",&t);
+    while(t--)
+    {
+        long long int n,ans;
+        sf("%lld",&n);
+        ans = ( (n%mod)* ((2*n-1)%mod) )%mod;
+ 
+        pf("%lld\n", ans );
+ 
+    }   
+ 
+    return 0;
+}

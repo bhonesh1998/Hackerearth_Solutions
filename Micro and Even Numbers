@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define lli long long int
+using namespace std;
+lli fa(lli n)
+ 
+{
+	if(n==0)
+			return 1;
+		else return n*fa(n-1);
+ 
+}
+ 
+ 
+int main()
+{
+ 
+	lli n,k,i,f=0,ans;
+	sf("%lld %lld",&n,&k);
+	lli a[n];
+	for(i=0;i<n;i++)
+		sf("%lld",&a[i]);
+	for(i=0;i<n;i++)
+		{
+			if(a[i]%2==0)
+				f++;
+		}
+ 
+		if(f<k || f==0)
+			pf("0");
+		else
+		{
+	ans = fa(f)/ ( fa(k)*fa(f-k) );
+ 
+	pf("%lld",ans);}
+ 
+ 
+ 
+}

@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+ 
+int main()
+{
+	int t,n;
+	sf("%d",&t);
+	while(t--)
+	{
+			sf("%d",&n);
+			switch(n%12)
+			{
+					case 1: pf("%d WS \n",n+11); break;
+					case 2: pf("%d MS \n" ,n+9); break;
+					case 3: pf("%d AS \n",n+7); break;
+					case 6: pf("%d WS \n",n+1); break;
+					case 5: pf("%d MS \n",n+3); break;
+					case 4: pf("%d AS \n",n+5); break;
+					case 7: pf("%d WS \n",n-1); break;
+					case 8: pf("%d MS \n",n-3); break;
+					case 9: pf("%d AS \n",n-5); break;
+					case 10: pf("%d AS \n",n-7); break;
+					case 11: pf("%d MS \n",n-9); break;
+					case 0: pf("%d WS \n",n-11); break;
+			}
+ 
+ 
+ 
+ 
+ 
+	}
+ 
+ 
+ 
+}

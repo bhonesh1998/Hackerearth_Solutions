@@ -1,0 +1,13 @@
+#include <stdio.h>
+ 
+int main()
+{int n,f=1;scanf("%d",&n);
+    if(n>=1&&n<=10){
+    
+    while(n>0)
+    {f*=n;
+    n--;
+    }
+    printf("%d",f);}
+    return 0;
+}

@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include<string.h>
+#include<ctype.h>
+#define pf printf
+#define sf scanf
+#define mod 1000000007
+#define z long long int 
+ 
+int main()
+{
+  z n,i,j,c,d=0;
+    sf("%lld",&n);
+    z a[n];
+    for(i=0;i<n;i++)
+        sf("%lld",&a[i]);
+    for(i=0;i<n-1;i++)
+    {
+        for(j=n-1;j>i;j--)
+        {
+            if(a[j]<a[j-1])
+            {
+                d++;
+                c=a[j];
+                a[j]=a[j-1];
+                a[j-1]=c;
+            }
+ 
+        }
+    }
+ 
+   // for(i=0;i<n;i++)
+     //   pf("%lld ",a[i]);
+    pf("%lld",d);
+ 
+}

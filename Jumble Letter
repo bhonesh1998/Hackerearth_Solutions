@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<string.h>
+#define pf printf
+#define sf scanf
+int main()
+{ 	
+	int t;
+	sf("%d",&t);
+	while(t--)
+	{
+	char s[1000000],a[1000000]={0},b[1000000]={0};
+	int k=0,f=0;
+	sf("%s",s);
+	int n =strlen(s);
+	for(int i=0;i<n;i++)
+	{	
+		if(s[i]>=65 && s[i]<=90)
+			s[i]+=32;
+		if(s[i] != 97 && s[i]!=101 && s[i]!=105 && s[i]!=111 && s[i]!=117 && s[i]!=121)
+			{a[k]=s[i];k++;}
+ 
+ 
+	}
+		int size = strlen(a);
+			size = 2*size;
+		for(int i=0;i<size;i++)
+		{
+			if(i%2==0)
+				b[i]='.';
+			else
+				b[i]=a[i/2];
+ 
+		}
+		pf("%s\n",b);
+	}

@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include <string.h>
+#define pf printf
+#define sf scanf
+int main()
+{ 
+int i,c=0,j;
+char s[1000];
+sf("%s",s);
+int n = strlen(s);
+for(i=0;i<n;i++)
+{
+		if(s[i]=='0' || s[i]=='1')
+		{		char x = s[i];
+				for(j=i+1;j<=i+6;j++)
+					{if(s[j]==x)
+							{c++;}
+ 
+					}
+ 
+					if(c==5)
+					{
+						pf("Sorry, sorry!");
+						return 0 ;
+					}
+					else
+								c=0;
+		}
+ 
+}
+ 
+pf("Good luck!");
+ 
+} 

@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+using namespace std;
+ 
+long long int fun(long long int a)
+{
+    if(a<9)
+            return a;
+        else
+            return a%9 + 10*fun(a/9);
+}
+int main()
+{ long long int b;
+ 
+    while( sf("%lld",&b)!=EOF)
+    {
+        
+        pf("%lld\n",fun(b));
+    }
+    
+ 
+       
+}

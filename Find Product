@@ -1,0 +1,27 @@
+#include<stdio.h>
+#define pf printf
+#define sf scanf
+#define mod 1000000007
+int main()
+{ 
+ 
+	long long int n,i,p=1;
+	sf("%ld",&n);
+	int a[n];
+	for(i=0;i<n;i++)
+		sf("%ld",&a[i]);
+	for(i=0;i<n;i++)
+		{
+				p=( p*a[i] )%mod;
+		}
+ 
+pf("%ld",p);
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+}

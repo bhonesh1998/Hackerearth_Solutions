@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include <string.h>
+#define pf printf
+#define sf scanf
+int main()
+{ 	
+	int t;
+	sf("%d",&t);
+	while(t--)
+	{int c=0,i;
+	char s[1000000];
+	sf("%s",s);
+	int n = strlen(s);
+	for(i=0;i<n;i++)
+	{
+		switch(s[i])
+		{
+			case 'a':
+			case 'e':
+			case 'i':
+			case 'o':
+			case 'u':
+			case 'A':
+			case 'E':
+			case 'I':
+			case 'O':
+			case 'U': c++;
+		}
+ 
+	}
+	
+	pf("%d\n",c);
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+}
+ 
+} 

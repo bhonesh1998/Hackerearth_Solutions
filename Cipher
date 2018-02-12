@@ -1,0 +1,46 @@
+# include <stdio.h>
+# include <math.h>
+# include <string.h>
+#define pf printf
+#define sf scanf
+#define mod 1000000007
+#define lli long long int 
+ 
+int main()
+{
+	int k,i;
+	char s[1000000];
+	sf("%s %d",s,&k);
+	int n = strlen(s);
+ 
+	for(i=0;i<n;i++)
+	{
+		if(s[i]>=65 && s[i]<=90)
+		{
+			if(s[i]+k>90)
+				s[i]=65+(k-91+s[i])%26  ;
+			else
+				s[i]=s[i]+k;
+		}
+ 
+		else if(s[i]>=97 && s[i]<=122)
+		{
+			if(s[i]+k>122)
+				s[i]=97+(k-123+s[i])%26 ;
+			else
+				s[i]=s[i]+k;
+		}
+ 
+		else if(s[i]>=48 && s[i]<=57)
+		{
+			if(s[i]+k>57)
+				s[i]=48+(k-58+s[i])%10;
+			else
+				s[i]=s[i]+k;
+		}
+		else {}
+		
+	}
+	pf("%s",s);
+ 
+}

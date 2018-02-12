@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+    long int n;
+    ;
+    while(scanf("%ld",&n)==1)
+    {
+       
+       int ans=0,r;
+        while(n)
+        {
+            r=n%2;
+            ans+=r;
+            n/=2;
+           
+        }
+        printf("%d\n",ans);
+    }
+    return 0;
+}

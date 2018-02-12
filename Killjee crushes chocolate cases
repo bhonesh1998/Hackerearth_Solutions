@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define z long long int 
+#define mod 1000000007
+using namespace std; 
+int main()
+{
+ 
+    
+    z n,i,e=0,o=0,a;
+    sf("%lld",&n);
+    for(i=0;i<n;i++)
+        {
+            sf("%lld",&a);
+            if(a%2==0)
+                e++;
+            else
+                o++;
+        }
+ 
+       pf("%lld",abs(e-o));
+ 
+   
+}

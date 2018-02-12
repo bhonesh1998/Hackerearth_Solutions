@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+using namespace std;
+ 
+int main()
+{
+    int n,i;
+    sf("%d",&n);
+    while(n--)
+    {   long long int s=0;
+        int m ;
+        sf("%d",&m);
+        for(i=1;i<m;i++)
+        {
+            if(m%i==0)
+                s+=i;
+        }
+        pf("%lld\n",s);
+    }
+       
+}
+    
+

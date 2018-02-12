@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<string.h>
+#define pf printf
+#define sf scanf
+int main()
+{ 	
+	int t,i,j;
+	sf("%d",&t);
+	while(t--)
+	{		
+			char s[200];
+			sf("%s",s);
+			int n = strlen(s);
+        int a[26]={0};
+        for(int i=0;i<n;i++)
+        {
+            if(a[s[i]-97]==0)
+            {
+                pf("%c",s[i]);
+                a[s[i]-97]=1;
+            }
+        }
+ 
+        pf("\n");
+ 
+	} 
+	
+ 
+}
+ 
+		
+ 
+ 

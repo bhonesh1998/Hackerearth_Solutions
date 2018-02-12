@@ -1,0 +1,24 @@
+# include <stdio.h>
+# include <math.h>
+#define pf printf
+#define sf scanf
+#define mod 1000000007
+#define lli long long int 
+ 
+int main()
+{
+	lli t,i;
+	sf("%lld",&t);
+	while(t--)
+	{
+		lli n,c=0;
+		sf("%lld",&n);
+		for(i=5;i<=n;i*=5)
+			c+=n/i;
+			
+		pf("%lld\n",c);
+ 
+ 
+	}
+ 
+}

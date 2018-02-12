@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<string.h>
+#define pf printf
+#define sf scanf
+int main()
+{ 	
+	int t,i,c=0;
+	sf("%d",&t);
+	while(t--)
+	{ c=0;
+	char s[1000000];
+	sf("%s",s);
+	int n =strlen(s);
+	for(i=0;i<n;i++)
+	{
+		if(  s[i]=='a' || s[i]=='e' || s[i]=='i' || s[i]=='o' || s[i]=='u'  )
+			c++;
+	}
+ 
+	pf("%d\n",c);
+	}
+ 
+ 
+} 

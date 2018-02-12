@@ -1,0 +1,36 @@
+# include <stdio.h>
+# include <math.h>
+# include <string.h>
+#define pf printf
+#define sf scanf
+#define mod 1000000007
+#define lli long long int 
+int main()
+{
+	
+	lli t;
+	sf("%lld",&t);
+	while(t--)
+	{
+		lli a,b;
+		sf("%lld %lld",&a,&b);
+ 
+		if( (b-a) == 1) 
+			pf( "%lld\n", (a&b) );
+		
+ 
+		else
+		{
+				if(b%2==0)
+					pf("%lld\n", (b-2) );
+				else
+					pf("%lld\n",(b-1) );
+ 
+		}
+ 
+ 
+		}
+ 
+ 
+ 
+}

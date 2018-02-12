@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define mod 1000000007
+#define z long long int 
+using namespace std;
+z fact(z f)
+{
+    if(f==0)
+        return 1;
+    else
+        return f*fact(f-1);
+}
+ 
+int main()
+{
+z n,k;
+sf("%lld %lld",&n,&k);
+ 
+z x = n/k;
+ 
+    pf("%lld",  (k-n%k)*( (x*x-x)/2 ) + (n%k)*(   (x*x+x)/2   )    );
+ 
+}

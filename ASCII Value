@@ -1,0 +1,10 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+ 
+int main()
+{
+	char x;
+	sf("%c",&x);
+	pf("%d",x);
+}

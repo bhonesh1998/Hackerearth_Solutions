@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+long long solve(long long n,long long a,long long b,long long c)
+{
+ 
+    long long ans =  n/a + n/b + n/c ;
+    long long x = (a*b)/__gcd(a,b);
+    long long y = (a*c)/__gcd(a,c);
+    long long z = (b*c)/__gcd(b,c);
+    long long xyz = (x*c)/__gcd(x,c) ;
+    ans-=(n/x+n/y+n/z);
+    ans+=n/xyz;
+    return ans;
+ 
+ 
+ 
+}
+ 
+int main()
+{
+    long long a,b,c,t,n;
+    cin>>t;
+    while(t--)
+    {
+        cin>>n>>a>>b>>c;
+        cout<<solve(n,a,b,c)<<"\n";
+    }
+}

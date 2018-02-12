@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include <string.h>
+#define pf printf
+#define sf scanf
+int main()
+{ 	int t;
+	sf("%d",&t);
+	while(t--)
+	{
+	int n,i,j;
+	sf("%d",&n);
+	for(i=0;i<n;i++)
+	{
+			for(j=i;j<=n-2;j++)
+				pf(" ");
+ 
+			for(j=n-1-i;j<=n-1+i;j++)
+			{
+					pf("*");
+ 
+ 
+			}
+			pf("\n");
+	}
+ 
+}
+ 
+} 

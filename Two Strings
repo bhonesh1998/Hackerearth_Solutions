@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include <string.h>
+#define pf printf
+#define sf scanf
+ 
+int main()
+{ 
+	int f=1,t,n,i; 
+	char s1[100001],s2[100001],h1[26],h2[26];
+	
+	sf("%d",&t);
+	while(t--)
+	{ 
+	    f=1;
+	   for(i=0;i<26;i++)
+	{
+		h1[i]=0;
+		h2[i]=0;
+	}
+	sf("%s%s",s1,s2);
+	n=strlen(s1);
+	for(i=0;i<n;i++)
+	{
+		h1[(int)(s1[i]-'a') ]++;	
+	}
+	for(i=0;i<n;i++)
+	{
+		h2[(int)(s2[i]-'a') ]++;	
+	}
+	for(i=0;i<26;i++)
+	{
+		if( h1[i] != h2[i] )
+			f=0;
+	}
+	if(f==1)
+		pf("YES\n");
+	else
+		pf("NO\n");
+	}
+}

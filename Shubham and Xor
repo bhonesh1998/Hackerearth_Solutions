@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define z long long int 
+using namespace std; 
+int main()
+{   
+    
+   map<z,z> m;
+   
+   map<z,z >:: iterator it ;
+ 
+   z n,i,s=0;
+   sf("%lld",&n);
+   z a[n];
+   for(i=0;i<n;i++)
+    sf("%lld",&a[i]);
+    for(i=0;i<n;i++)
+    m[a[i]]++;
+ 
+    
+   for(it=m.begin();it!=m.end();it++)
+   {       
+   z f = it->second; 
+        s=s+(f*(f-1)/2);
+   } 
+ 
+   pf("%lld",s);
+ 
+ 
+}

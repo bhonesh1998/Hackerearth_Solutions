@@ -1,0 +1,29 @@
+#include <stdio.h>
+#define pf printf
+#define sf scanf
+int main()
+{
+    int n,x,c=0,a;
+    sf("%d %d ",&n,&x);
+    while(n--)
+    {   c++;
+        sf("%d",&a);
+        x-=a;
+        if(x<0)
+        {
+            pf("%d",c);
+            break;
+        }
+ 
+ 
+ 
+    }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    return 0;
+}

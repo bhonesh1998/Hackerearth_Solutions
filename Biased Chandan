@@ -1,0 +1,30 @@
+#include <iostream>
+#include <stack>
+using namespace std;
+ 
+int main()
+{
+    int n;
+    cin>>n;
+    stack<int> s;
+    long sum=0;
+    int t;
+    while(n--)
+    {
+        cin>>t;
+        s.push(t);
+        if(s.top()==0)
+        {
+            s.pop();
+            if(s.empty()!=1)
+                {
+                   sum-=s.top();
+                    s.pop();
+                }
+        }        
+        else
+            sum+=s.top();
+    }
+    cout<<sum;
+    return 0;
+}

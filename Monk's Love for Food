@@ -1,0 +1,37 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define z long long int 
+using namespace std;
+int main()
+{
+    
+    stack <z> st;
+    z n,a,c;
+    sf("%lld",&n);
+ 
+    while(n--)
+    {
+        sf("%lld",&a);
+ 
+        if(a==1)
+        {
+            if(st.empty())
+                pf("No Food\n");
+            else
+                {pf("%lld\n",st.top()); st.pop();}
+ 
+        }
+ 
+        else
+        {
+            sf("%lld",&c);
+ 
+            st.push(c);
+ 
+        }
+ 
+    }
+ 
+ 
+}

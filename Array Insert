@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include <string.h>
+#define pf printf
+#define sf scanf
+ 
+int main()
+{ 
+ 
+	int n,t,i,s=0;
+	sf("%d %d",&n,&t);
+	int a[n];
+	for(i=0;i<n;i++)
+		sf("%d",&a[i]);
+	while(t--)
+	{	int op,x,y;
+	    s=0;
+		sf("%d %d %d ",&op,&x,&y);
+		if(op==1)
+			a[x]=y;
+		else
+		{
+			if(x>=0 && y<=n)
+			{
+					for(i=x;i<=y;i++)
+						s+=a[i];
+					pf("%d\n",s);
+			}
+				else
+					pf("-1\n");
+ 
+		}
+ 
+ 
+ 
+ 
+ 
+	}
+		
+ 
+ 
+}

@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+#include<queue>
+#define pf printf
+#define sf scanf
+#define mod 1000000007
+#define z long long int 
+using namespace std;
+ 
+int main(){
+ 
+    z t ;
+    sf("%lld",&t);
+    while(t--)
+    {
+    z n,m,i,s1=0,s2=0,j;
+    sf("%lld %lld",&n,&m);
+    z a[n];
+    for(i=0;i<n;i++)
+        sf("%lld",&a[i]);
+    sort(a,a+n);
+    z k = n-m;
+    i=n-1;j=0;
+        while(k--)
+            {
+        s1+=a[i];i--;
+        s2+=a[j];j++;
+    }
+ 
+    pf("%lld\n",abs(s1-s2));
+}
+ 
+ 
+    return 0;
+} 

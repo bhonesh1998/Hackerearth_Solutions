@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include <string.h>
+#define pf printf
+#define sf scanf
+ 
+int main()
+{ int n;
+	while(1)
+	{
+	sf("%d",&n);
+	if(n!=42)
+		pf("%d\n",n);
+	else
+		break;
+ }
+}
