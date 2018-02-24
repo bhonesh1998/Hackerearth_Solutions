@@ -1,0 +1,30 @@
+/*
+***********************************************************
+***********************************************************
+NAME-BHONESH CHAWLA
+REGNO-20164017
+BATCH-CS-1
+CONTACT-+918619127663
+EMAIL-rajachawla778@gmail.com
+***********************************************************
+***********************************************************
+*/
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define mod 1000000007
+#define z long long int
+using namespace std;
+int main()
+{
+	
+	z n,t;
+	sf("%lld",&t);
+	while(t--)
+	{
+		sf("%lld",&n);
+		pf("%lld\n",(n|n^(n+1)));
+	}
+
+}
+
