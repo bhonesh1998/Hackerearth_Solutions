@@ -1,0 +1,91 @@
+/*
+***********************************************************
+***********************************************************
+
+NAME-BHONESH CHAWLA
+REGNO-20164017
+BATCH-CS-1
+CONTACT-+918619127663
+EMAIL-rajachawla778@gmail.com
+***********************************************************
+***********************************************************
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+#define pf printf
+#define sf scanf
+#define z long long int
+int s=0;
+int stadd( stack <int> st )
+{
+  s=0;
+  while(!st.empty())
+    {
+        int we= st.top();
+       // pf("che we  %d\n",we);
+        s+=we;
+        st.pop();
+    }
+    return s;
+}
+int  main()
+{
+    stack <int> hr,ohr;
+    stack <int> mo;
+    int n ;
+    sf("%d",&n);
+	int k = n;
+    while(n--)
+    { int a;
+      sf("%d",&a);
+      hr.push(a);
+    }
+    while(k--)
+    {
+      int b = hr.top();
+      hr.pop();
+      ohr.push(b);
+    }
+
+    int q,x;
+    sf("%d%d",&q,&x);
+    while(q--)
+    {
+        string s ;
+        cin>>s;
+		//out << s << endl;
+		string s1="Harry";
+		string s2="Remove";
+
+        if(s==s1)
+          {
+			//pf("HI");
+            int r = ohr.top();
+            ohr.pop();
+            mo.push(r);
+            int ans = stadd(mo);
+          //  pf("che ans %d\n",ans);
+            if(ans == x)
+              {
+                pf("%d",mo.size());
+                return 0;
+              }
+           // pf("che %d\n",r);
+          }
+          else if (s==s2)
+          {
+              mo.pop();
+              int ans = stadd(mo);
+              //pf("che ans %d\n",ans);
+              if(ans == x)
+                {
+                  pf("%d",mo.size());
+                  return 0;
+                }
+
+          }
+    }
+
+    pf("-1");
+}
