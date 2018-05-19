@@ -1,0 +1,51 @@
+/*
+***********************************************************
+***********************************************************
+
+NAME-BHONESH CHAWLA
+REGNO-20164017
+BATCH-CS-1
+CONTACT-+918619127663
+EMAIL-rajachawla778@gmail.com
+***********************************************************
+***********************************************************
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+#define pf printf
+#define sf scanf
+#define z long long int
+int i,j;
+int  main()
+{
+    queue <int> q;
+    int n ;
+    sf("%d",&n);
+    while(n--)
+    {
+          char ch,c;
+          sf("%c%c",&c,&ch);
+          if(ch=='E')
+              {
+                  int a ;
+                  sf("%d",&a);
+                  q.push(a);
+                  pf("%d\n",q.size());
+              }
+          else if (ch=='D')
+          {
+              if(!q.empty())
+              {
+                  int we= q.front();
+                  q.pop();
+                  pf("%d %d\n",we,q.size());
+              }
+              else
+              {
+                  pf("-1 0\n");
+              }
+          }
+    }
+
+}
