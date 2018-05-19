@@ -1,0 +1,53 @@
+/*
+***********************************************************
+***********************************************************
+
+NAME-BHONESH CHAWLA
+REGNO-20164017
+BATCH-CS-1
+CONTACT-+918619127663
+EMAIL-rajachawla778@gmail.com
+***********************************************************
+***********************************************************
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+#define pf printf
+#define sf scanf
+#define z long long int
+int  main()
+{
+
+  int t;
+  sf("%d",&t);
+  while(t--)
+  {stack<int> st;
+      int n,q;
+      sf("%d%d",&n,&q);
+      st.push(q);
+      for(int i=1;i<=n;i++)
+      {
+        //pf("i is %d",i);
+        char ch,c;
+        int id;
+        sf("%c%c",&c,&ch);
+        if(ch=='P')
+          {sf("%d",&id);
+            st.push(id);
+            //pf("chid  %d\n",id);
+          }
+        else if (ch=='B')
+          {
+            int r1=st.top();
+            st.pop();
+            int r=st.top();
+            st.push(r1);
+           // pf("chr1  %d\n",r1);
+            st.push(r);
+           // pf("chr  %d\n",r);
+          }
+      }
+      pf("Player %d\n",st.top());
+  }
+}
