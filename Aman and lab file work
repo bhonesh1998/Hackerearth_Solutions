@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define pf printf
+#define sf scanf
+#define z long long int
+z i,j;
+//bool sortbysec(const pair <z,z> &c , const pair <z,z > &d)
+//{  return ( c.second < d.second ); }
+int  main()
+{
+    vector < pair<z ,z > > ve;
+    z n ;
+    sf("%lld",&n);
+    for(i=0;i<n;i++)
+      {
+          z x,y;
+          sf("%lld%lld",&x,&y);
+          ve.push_back(make_pair((x+y),(i+1)) );
+      }
+      sort(ve.begin(),ve.end());
+      for(i=0;i<n;i++)
+          pf("%lld ",ve[i].second);
+}
