@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define pf printf
+#define sf scanf
+#define z long long int
+z i,j;
+int main()
+{
+    int n, m, v;
+    vector<int> V(10005, 0);
+    bool h[10005];
+    sf("%d",&m);
+    for(int i = 0; i != m; ++i)
+    {
+        sf("%d",&v);
+        V[v] = 1;
+    }
+    sf("%d",&n);
+    int ans = 0;
+    getchar();
+    while(n--)
+    {
+        char c;
+        int cnt = 0;
+        memset(h, 0, sizeof(h));
+        while(true)
+        {
+            scanf("%d",&v);
+            if(V[v]== 1 && !h[v]){ cnt++;
+            h[v] = true;
+            }
+
+            c = getchar();
+            if(c == ' ') continue;
+            else break;
+        }
+        if(cnt == m) ans++;
+    }
+    pf("%d\n",ans);
+}
