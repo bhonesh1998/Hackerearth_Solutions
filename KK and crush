@@ -1,0 +1,51 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define pf printf
+#define sf scanf
+#define z long long int
+int  main()
+{
+ 
+    int t;
+    sf("%d",&t);
+    while(t--)
+    {
+        int h[1000000]={0};
+        int n ;
+        sf("%d",&n);
+        while(n--)
+        {
+            int a ;
+            sf("%d",&a);
+            if(a>=0)
+            h[a]++;
+            else
+            h[100000+abs(a)]++;
+        }
+        int k ;
+        sf("%d",&k);
+ 
+        while(k--)
+        {
+            int se;
+            sf("%d",&se);
+            if(se>=0)
+              {
+                  if(h[se]>0)
+                    pf("Yes\n");
+                    else
+                    pf("No\n");
+              }
+            else
+            {
+                if(h[100000+abs(se)]>0 )
+                  pf("Yes\n");
+                  else
+                  pf("No\n");
+            }
+ 
+        }
+ 
+    }
+ 
+}
