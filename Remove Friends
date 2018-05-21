@@ -1,0 +1,74 @@
+/*
+***********************************************************
+***********************************************************
+
+NAME-BHONESH CHAWLA
+REGNO-20164017
+BATCH-CS-1
+CONTACT-+918619127663
+EMAIL-rajachawla778@gmail.com
+***********************************************************
+***********************************************************
+*/
+
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define z long long int 
+using namespace std;
+int i;
+
+void show(list <int > ll)
+{
+	list <int>  :: iterator it ;
+	for(it=ll.begin();it!=ll.end();it++)
+		pf("%d ",*it);	
+
+}
+int main()
+{
+  int t;
+  scanf("%d",&t);
+  while(t--)
+  {
+      int n,k,tmp;
+      scanf("%d %d",&n,&k);
+      list<int> v;
+      list<int> :: iterator it;
+      for(int i=0;i<n;++i)
+      {
+          scanf("%d",&tmp);
+          v.push_back(tmp);
+      }
+      for(it=v.begin();it!=v.end();)
+      {
+          int tmp1=*(v.begin());
+          if(k==0)
+              break;
+          int val=*it;
+          it++;
+          int val1=*it;
+          if(val>=val1)
+              continue;
+          else
+          {
+              --it;
+              v.erase(it);
+              int tmp2=*it;
+              if(tmp1!=tmp2)
+                  --it;
+              else
+                  it=v.begin();
+              k--;
+          }
+      }
+      if(k!=0)
+      {
+          for(int i=0;i<k;++i)
+              v.pop_back();
+      }
+      show(v);
+      printf("\n");
+  }
+  return 0;
+}
