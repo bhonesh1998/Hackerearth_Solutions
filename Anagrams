@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define db double 
+#define z long long int 
+using namespace std;
+ 
+ 
+int main()
+{
+        int t,i;
+        sf("%d",&t);
+        while(t--)
+        {
+        int c=0;
+   string s1,s2;
+   cin>>s1>>s2;
+   int h1[26]={0},h2[26]={0};
+        for(i=0;i<s1.length();i++)
+                h1[s1[i]-'a']++;
+         for(i=0;i<s2.length();i++)
+                h2[s2[i]-'a']++;
+        for(i=0;i<26;i++)
+        {
+                
+                        c=c+abs(h1[i]-h2[i]);
+        }
+ 
+        pf("%d\n",c);
+}}
