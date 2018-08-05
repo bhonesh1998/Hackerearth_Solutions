@@ -1,0 +1,52 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define db double 
+#define z long long int 
+using namespace std ;
+#define siz 100001
+#define mod 1000000007
+
+
+
+int main()
+{ 
+  z n;cin>>n;
+   while(n--)
+   {
+    string s; cin>>s;
+    z s1=0,s2=0;
+    z x =s.length();
+    for(z i=0;i<x;i++)
+    {
+        if( (i+3 )<x  && s[i]=='S' )
+        {
+            if(s[i+1]=='U' && s[i+2]=='V'&&s[i+3]=='O')
+              s1++;
+        }
+        if( (i+6)<x &&  s[i]=='S')
+        {
+            if(s[i+1]=='U' && s[i+2]=='V'&&s[i+3]=='O' && s[i+4]=='J' &&s[i+5]=='I' && s[i+6]=='T' )
+              s2++;
+        }
+        
+
+    }if(s2)
+        s1-=s2;
+
+   // cout <<SUVO = 0, SUVOJIT = 1<<endl;
+    cout <<"SUVO = "<<s1<<", SUVOJIT = "<<s2<<endl;
+
+
+   }
+ }
+
+
+     
+
+
+
+
+       
+  
+
